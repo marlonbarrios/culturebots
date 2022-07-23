@@ -41,7 +41,8 @@ let covid = [
   'covid.png'
 ]
 let fire = [
-  'https://media.giphy.com/media/26DNj3iQi58mrvTDW/giphy.gif'
+  'https://vignette.wikia.nocookie.net/wingsoffirefanon/images/6/63/Firegif.gif/revision/latest?cb=20190525014138',
+  'earth.gif',
 ]
 
 let ak47 = [
@@ -237,6 +238,7 @@ function setup() {
   gui.add(settings, 'align', 0, 2).name('Alignment');
 
   gui.remember(settings, bg_color);
+  gui.width = 300;
   gui.close();
   
   background(bg_color.bg_red, bg_color.bg_green, bg_color.bg_blue, bg_color.bg_alpha);
