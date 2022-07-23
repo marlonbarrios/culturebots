@@ -1,3 +1,13 @@
+// // CultureBots: Ideological Flocking Tool
+// // (work in progress)
+// Concept and programming Marllon Barrios Solano
+
+// // In the US and in most of the globalized north, we are surrounded  and chased by ideologies, trainings, iconographies, and trivializing  representations of affect supported by money and historical trails. Tragic and hilarious...
+// // Play with it and share it. It is still a work in progress...
+// // You can change the number of agents, the background color, you can 'draw traces', you may change the intensities of seeking behavior, separation and cohesion of the 'flock'.
+// // You can save a  screenshot pressing 's'...
+
+
 
 let flowers = [
   'camomile.png',
@@ -184,7 +194,7 @@ function setup() {
   
   gui = new dat.GUI();
 
-  gui.add(settings, 'numberOfAgents', 0, 200, step=1)
+  gui.add(settings, 'numberOfAgents', 0, 200, step=1).name('Number of agents');
 
 
   
@@ -196,7 +206,7 @@ function setup() {
   gui.add(settings, 'maga', false, true).name('MAGA Hats'),
   gui.add(settings, 'crosses', false, true).name('Bedfellows'),
   gui.add(settings, 'ak47', false, true).name('Ak47s'),
-  gui.add(settings, 'fire', false, true).name('Fires'),
+  gui.add(settings, 'fire', false, true).name('Burning'),
 
   gui.add(settings, 'covid', false, true).name('Covid'),
   //brands
@@ -212,21 +222,19 @@ function setup() {
   
  
 
-  gui.add(settings, 'redraw_bg');
+  gui.add(settings, 'redraw_bg').name('Redraw Background');
 
-  gui.add(bg_color, 'bg_red', 0, 255); 
-  gui.add(bg_color, 'bg_green', 0, 255);
-  gui.add(bg_color, 'bg_blue', 0, 255);
-  gui.add(bg_color, 'bg_alpha', 0, 255);
+  gui.add(bg_color, 'bg_red', 0, 255).name(('Background Red'));
+  gui.add(bg_color, 'bg_green', 0, 255).name(('Background Green'));
+  gui.add(bg_color, 'bg_blue', 0, 255).name(('Background Blue'));
 
-
-  gui.add(settings, 'damping', 0.1, 1);
-  gui.add(settings, 'rotate', false, true);
-  gui.add(settings, 'twitch', 0, 2);
-  gui.add(settings, 'seek', 0.01, 0.9);
-  gui.add(settings, 'separate', 0, 3);
-  gui.add(settings, 'cohesion', 0, 2);
-  gui.add(settings, 'align', 0, 2); 
+  gui.add(settings, 'damping', 0.1, 1).name('Speed');
+  gui.add(settings, 'rotate', false, true).name('Rotate');
+  gui.add(settings, 'twitch', 0, 2).name('Twitch');
+  gui.add(settings, 'seek', 0.01, 0.9).name('Seek the Mouse');
+  gui.add(settings, 'separate', 0, 3).name('Separation');
+  gui.add(settings, 'cohesion', 0, 2).name('Cohesion');
+  gui.add(settings, 'align', 0, 2).name('Alignment');
 
   gui.remember(settings, bg_color);
   gui.close();
