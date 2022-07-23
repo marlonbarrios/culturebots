@@ -106,7 +106,7 @@ faang: false,
   cohesion: 1, 
   align: 1,
 
-  numberOfAgents: 10,
+  numberOfAgents: 50,
 
 };
 
