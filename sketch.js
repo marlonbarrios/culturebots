@@ -241,7 +241,7 @@ function setup() {
   gui.add(settings, 'crosses', false, true).name('Bedfellows'),
   gui.add(settings, 'ak47', false, true).name('Ak47s'),
   gui.add(settings, 'fire', false, true).name('Burning Earths'),
-  gui.add(settings, 'prides', false, true).name('Pride Flags'),
+  gui.add(settings, 'prides', false, true).name('Rainbow Flags'),
   gui.add(settings, 'covid', false, true).name('Covids'),
   //brands
   //ants
