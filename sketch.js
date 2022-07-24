@@ -1,4 +1,5 @@
-// // CultureBots: Ideological Flocking Tool
+// // CultureBots: Tool for Ideological Swarming
+//July 2022
 // // (work in progress)
 // Concept and programming Marllon Barrios Solano
 
@@ -37,8 +38,16 @@ let faang = [
 let bots = [
   'bot.png'
 ]
+
+let prides = [
+  'pride.png',
+]
+
 let covid = [
-  'covid.png'
+  'covid.png',
+  'covidblue.png',
+  'covidpurple.png',
+ 
 ]
 let fire = [
   'https://vignette.wikia.nocookie.net/wingsoffirefanon/images/6/63/Firegif.gif/revision/latest?cb=20190525014138',
@@ -64,7 +73,6 @@ let crosses = [
 ]
 
 
-
 let emojis = [
 'eggplant.png',
 'heart.png',
@@ -74,6 +82,11 @@ let emojis = [
 'dollar.png',
 'eyes.gif', 
 'thumbsdown.png',
+]
+
+let warhols = [
+  // 'brillo.png',
+  'marilyn.png'
 ]
 
 
@@ -88,6 +101,8 @@ let spritesMaga = [];
 let spritesUSA = [];
 let spritesCrosses = [];
 let spritesFaang = [];
+let spritesWarhols = [];
+let spritesPrides = [];
 let group = [];
 
 
@@ -105,7 +120,8 @@ maga: false,
 usaFlag: false,
 crosses: false,
 faang: false,
-
+warhols: false,
+prides:  false,
   redraw_bg: true,
   damping: 1,
   transparency: 0.5,
@@ -122,9 +138,9 @@ faang: false,
 };
 
 let bg_color = {
-  bg_red: 40,
-  bg_green:112,
-  bg_blue: 178,
+  bg_red: 0,
+  bg_green:0,
+  bg_blue: 0,
 bg_alpha: 10
 }
 
@@ -185,6 +201,14 @@ function preload() {
     let img = loadImage(f);
     spritesFaang.push(img);
   }
+  for ( let w of warhols) {
+    let img = loadImage(w);
+    spritesWarhols.push(img);
+  }
+  for ( let p of prides) {
+    let img = loadImage(p);
+    spritesPrides.push(img);
+  }
 }
 
 
@@ -196,20 +220,29 @@ function setup() {
   gui = new dat.GUI();
 
   gui.add(settings, 'numberOfAgents', 0, 200, step=1).name('Number of agents');
+  gui.add(settings, 'damping', 0.1, 1).name('Speed');
+  gui.add(settings, 'rotate', false, true).name('Rotate');
+  gui.add(settings, 'twitch', 0, 2).name('Twitch');
+  gui.add(settings, 'seek', 0.01, 0.9).name('Seek the Mouse');
+  gui.add(settings, 'separate', 0, 3).name('Separation');
+  gui.add(settings, 'cohesion', 0, 2).name('Cohesion');
+  gui.add(settings, 'align', 0, 2).name('Alignment');
 
-
-  
-  gui.add(settings, 'circle', false, true).name('Boids Circle');
+  gui.add(settings, 'redraw_bg').name('Redraw Background');
+  gui.add(settings, 'circle', false, true).name('Circular Boids');
   gui.add(settings, 'bots', false, true).name('Robots');
   gui.add(settings, 'emojis', false, true).name('Emojis'),
+  gui.add(settings, 'warhols', false, true).name('Marilyns'),
   gui.add(settings, 'usaFlag', false, true).name('USA Flags'),
+ 
+  
   gui.add(settings, 'faang', false, true).name('FAANG'),
   gui.add(settings, 'maga', false, true).name('MAGA Hats'),
   gui.add(settings, 'crosses', false, true).name('Bedfellows'),
   gui.add(settings, 'ak47', false, true).name('Ak47s'),
-  gui.add(settings, 'fire', false, true).name('Burning'),
-
-  gui.add(settings, 'covid', false, true).name('Covid'),
+  gui.add(settings, 'fire', false, true).name('Burning Earths'),
+  gui.add(settings, 'prides', false, true).name('Pride Flags'),
+  gui.add(settings, 'covid', false, true).name('Covids'),
   //brands
   //ants
   //bitcoin
@@ -223,21 +256,15 @@ function setup() {
   
  
 
-  gui.add(settings, 'redraw_bg').name('Redraw Background');
 
-  gui.add(bg_color, 'bg_red', 0, 255).name(('Background Red'));
-  gui.add(bg_color, 'bg_green', 0, 255).name(('Background Green'));
-  gui.add(bg_color, 'bg_blue', 0, 255).name(('Background Blue'));
 
-  gui.add(settings, 'damping', 0.1, 1).name('Speed');
-  gui.add(settings, 'rotate', false, true).name('Rotate');
-  gui.add(settings, 'twitch', 0, 2).name('Twitch');
-  gui.add(settings, 'seek', 0.01, 0.9).name('Seek the Mouse');
-  gui.add(settings, 'separate', 0, 3).name('Separation');
-  gui.add(settings, 'cohesion', 0, 2).name('Cohesion');
-  gui.add(settings, 'align', 0, 2).name('Alignment');
+  // gui.add(bg_color, 'bg_red', 0, 255).name(('Background Red'));
+  // gui.add(bg_color, 'bg_green', 0, 255).name(('Background Green'));
+  // gui.add(bg_color, 'bg_blue', 0, 255).name(('Background Blue'));
 
-  gui.remember(settings, bg_color);
+ 
+
+  gui.remember(settings);
   gui.width = 300;
   gui.close();
   
@@ -265,7 +292,7 @@ function keyPressed() {
   }
   
   if (key == 's') {
-    save("drawing.jpg");
+    save("culture_bot.jpg");
   }
 }
 
@@ -330,7 +357,9 @@ function createAgent() {
     spritesMaga: random(spritesMaga),
     spritesUSA: random(spritesUSA),
     spritesCrosses: random(spritesCrosses),
-    spritesFaang: random(spritesFaang)
+    spritesFaang: random(spritesFaang),
+    spritesWarhols: random(spritesWarhols),
+    spritesPrides: random(spritesPrides)
   };  
   return newAgent; 
 }
@@ -406,6 +435,16 @@ function render(agent) {
     imageMode(CENTER);
     image(agent.spritesFaang, 0, 0, 80, 80);
   }
+  else if (settings.rotate == true && settings.warhols == true)  {
+    rotate(agent.vel.heading());
+    imageMode(CENTER);
+    image(agent.spritesWarhols, 0, 0, 80, 80);
+  }
+  else if (settings.rotate == true && settings.prides == true)  {
+    rotate(agent.vel.heading());
+    imageMode(CENTER);
+    image(agent.spritesPrides, 0, 0, 80, 80);
+  }
 
 
 
@@ -463,8 +502,17 @@ else if (settings.rotate == false && settings.bots == true)  {
  else if (settings.rotate == false && settings.faang == true)  {
   imageMode(CENTER);
   image(agent.spritesFaang, 0, 0, 80, 80);
+ }
+   else if (settings.rotate == false && settings.warhols == true)  {
+  imageMode(CENTER);
+  image(agent.spritesWarhols, 0, 0, 80, 80);
+ } 
+ else if (settings.rotate == false && settings.prides == true)  {
+  imageMode(CENTER);
+  image(agent.spritesPrides, 0, 0, 80, 80);
  } 
 
+ 
 pop();
 }
 
