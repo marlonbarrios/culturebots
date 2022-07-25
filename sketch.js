@@ -21,6 +21,9 @@ let flowers = [
   'violet2.png',
   'yellow-dandelion.png',
   'dandelion.png',
+  'monarch.gif',
+'colorbutterfly.gif'
+
 
 ];
 
@@ -252,7 +255,7 @@ function setup() {
  
  
 
-  gui.add(settings, 'flowers', false, true).name('Flowers');
+  gui.add(settings, 'flowers', false, true).name('Flowers & friends');
   
  
 
