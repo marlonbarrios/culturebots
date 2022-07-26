@@ -11,18 +11,20 @@
 
 
 let flowers = [
-  'camomile.png',
-  'palepink.png',
-  'pink.png',
-  'red.png',
-  'violet.png',
-  'orchid.png',
-  'yellow.png',
-  'violet2.png',
-  'yellow-dandelion.png',
-  'dandelion.png',
-  'monarch.gif',
-'colorbutterfly.gif'
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672202481?profile=RESIZE_710x',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672202481?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672202076?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672201286?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672199500?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672195871?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672194697?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672194498?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672191695?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672190661?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672188687?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672183452?profile=original'
+
+
 
 
 ];
