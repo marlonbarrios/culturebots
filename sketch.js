@@ -11,7 +11,7 @@
 
 
 let flowers = [
-  'https://storage.ning.com/topology/rest/1.0/file/get/10672202481?profile=RESIZE_710x',
+
   'https://storage.ning.com/topology/rest/1.0/file/get/10672202481?profile=original',
   'https://storage.ning.com/topology/rest/1.0/file/get/10672202076?profile=original',
   'https://storage.ning.com/topology/rest/1.0/file/get/10672201286?profile=original',
@@ -22,76 +22,78 @@ let flowers = [
   'https://storage.ning.com/topology/rest/1.0/file/get/10672191695?profile=original',
   'https://storage.ning.com/topology/rest/1.0/file/get/10672190661?profile=original',
   'https://storage.ning.com/topology/rest/1.0/file/get/10672188687?profile=original',
-'https://storage.ning.com/topology/rest/1.0/file/get/10672183452?profile=original'
-
-
-
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672183452?profile=original'
 
 ];
 
 let faang = [
-  'amazon.png',
-  'apple.png',
-  'facebook.png',
-  'google.png',
-  'netflix.png',
-  'instagram.png',
-  'meta.png',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672214691?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672215289?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672290255?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672290662?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672296090?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672290901?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672295660?profile=original',
 
 ]
 
 let bots = [
   'bot.png'
+  // 'https://storage.ning.com/topology/rest/1.0/file/get/10672215886?profile=original'
 ]
 
 let prides = [
-  'pride.png',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672296070?profile=original',
 ]
 
 let covid = [
-  'covid.png',
-  'covidblue.png',
-  'covidpurple.png',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672218679?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672218867?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672218897?profile=original',
  
 ]
 let fire = [
   'https://vignette.wikia.nocookie.net/wingsoffirefanon/images/6/63/Firegif.gif/revision/latest?cb=20190525014138',
-  'earth.gif',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672286299?profile=original',
 ]
 
 let ak47 = [
-  'ak47.png'
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672213057?profile=original'
 ]
 
-let maga = [
-  'magahat.png'
-]
+
 
 let usaflag = [
   'https://gifimage.net/wp-content/uploads/2017/09/american-flag-gif-transparent-13.gif'
 ]
 
 let crosses = [
-  'swastika.png',
-  'conf.png',
-  'cristiana.png'
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672295295?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672216278?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672220493?profile=original',
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672292864?profile=original'
 ]
 
 
 let emojis = [
-'eggplant.png',
-'heart.png',
-'drops.png',
-'smilingface.png',
-'thumbsup.png',
-'dollar.png',
-'eyes.gif', 
-'thumbsdown.png',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672288652?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672288899?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672225301?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672295062?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672294895?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672225083?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672289667?profile=original', 
+'https://storage.ning.com/topology/rest/1.0/file/get/10672294278?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672438888?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672444690?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672446494?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672449869?profile=original',
+'https://storage.ning.com/topology/rest/1.0/file/get/10672454463?profile=original'
 ]
 
 let warhols = [
-  // 'brillo.png',
-  'marilyn.png'
+ 
+  'https://storage.ning.com/topology/rest/1.0/file/get/10672293472?profile=original'
 ]
 
 
@@ -102,7 +104,7 @@ let spritesEmojis = [];
 let spritesCovid = [];
 let spritesFire = [];
 let spritesAk47 = [];
-let spritesMaga = [];
+
 let spritesUSA = [];
 let spritesCrosses = [];
 let spritesFaang = [];
@@ -121,7 +123,7 @@ let settings = {
 covid: false,
 fire: false,
 ak47: false,
-maga: false,
+
 usaFlag: false,
 crosses: false,
 faang: false,
@@ -188,11 +190,6 @@ function preload() {
     spritesAk47.push(img);
   }
 
-  for ( let m of maga) {
-    let img = loadImage(m);
-    spritesMaga.push(img);
-    
-  }
   for ( let u of usaflag) {
     let img = loadImage(u);
     spritesUSA.push(img);
@@ -242,7 +239,6 @@ function setup() {
  
   
   gui.add(settings, 'faang', false, true).name('FAANG'),
-  gui.add(settings, 'maga', false, true).name('MAGA Hats'),
   gui.add(settings, 'crosses', false, true).name('Bedfellows'),
   gui.add(settings, 'ak47', false, true).name('Ak47s'),
   gui.add(settings, 'fire', false, true).name('Burning Earths'),
@@ -254,7 +250,6 @@ function setup() {
   //poop
   //peace and love
   //campbell soups
- 
  
 
   gui.add(settings, 'flowers', false, true).name('Flowers & friends');
@@ -359,7 +354,6 @@ function createAgent() {
     spritesCovid: random(spritesCovid),
     spritesFire: random(spritesFire),
     spritesAk47: random(spritesAk47),
-    spritesMaga: random(spritesMaga),
     spritesUSA: random(spritesUSA),
     spritesCrosses: random(spritesCrosses),
     spritesFaang: random(spritesFaang),
@@ -385,16 +379,90 @@ function render(agent) {
     //let n = noise((agent.id+frameCount)*0.01);
     //let n = random(1);
     translate(agent.pos.x, agent.pos.y);
+
+    if (settings.bots == true)  {
+      
+      imageMode(CENTER);
+      image(agent.spritesBots, 0, 0, 80, 80);
+    } 
+    else if (settings.rotate == false && settings.circle == true) {
   
-    if (settings.rotate == true && settings.bots == true)  {
+    ellipseMode(CENTER);
+    ellipse(0, 0, 20, 20);  
+  } 
+
+
+  else if (settings.rotate == false && settings.flowers == true)  {
+    imageMode(CENTER);
+    image(agent.spritesFlowers, 0, 0, 80, 80);
+  }
+  else if (settings.rotate == false && settings.emojis == true)  {
+    imageMode(CENTER);
+    image(agent.spritesEmojis, 0, 0, 80, 80);
+  }
+  else if (settings.rotate == false && settings.covid == true)  {
+   
+    imageMode(CENTER);
+    image(agent.spritesCovid, 0, 0, 80, 80);
+  }
+  else if (settings.rotate == false && settings.fire == true)  {
+  
+    imageMode(CENTER);
+    image(agent.spritesFire, 0, 0, 80, 80);
+  }
+
+  else if (settings.rotate == false && settings.ak47 == true)  {
+   
+    imageMode(CENTER);
+    image(agent.spritesAk47, 0, 0, 100, 100);
+  }
+
+  else if (settings.rotate == false  && settings.usaFlag == true)  {
+  
+    imageMode(CENTER);
+    image(agent.spritesUSA, 0, 0, 80, 80);
+  }
+  else if (settings.rotate == false && settings.crosses == true)  {
+ 
+    imageMode(CENTER);
+    image(agent.spritesCrosses, 0, 0, 80, 80);
+  }
+
+  else if (settings.rotate == false && settings.faang == true)  {
+ 
+    imageMode(CENTER);
+    image(agent.spritesFaang, 0, 0, 80, 80);
+  }
+
+  else if (settings.rotate == false && settings.warhols == true)  {
+  
+    imageMode(CENTER);
+    image(agent.spritesWarhols, 0, 0, 80, 80);
+  }
+
+  else if (settings.prides == true)  {
+  
+    imageMode(CENTER);
+    image(agent.spritesPrides, 0, 0, 80, 80);
+  }
+else if (settings.circle == true)  {
+
+ ellipseMode(CENTER);
+ ellipse(0, 0, 20, 20);  
+} 
+
+
+if (settings.rotate == true && settings.bots == true)  {
       rotate(agent.vel.heading());
       imageMode(CENTER);
       image(agent.spritesBots, 0, 0, 80, 80);
-    } else if (settings.rotate == true && settings.circle == true)  {
+    } 
+    else if (settings.rotate == true && settings.circle == true) {
     rotate(agent.vel.heading());
     ellipseMode(CENTER);
     ellipse(0, 0, 20, 20);  
-  } else if (settings.rotate == true && settings.flowers == true)  {
+  } 
+  else if (settings.rotate == true && settings.flowers == true)  {
     rotate(agent.vel.heading());
     imageMode(CENTER);
     image(agent.spritesFlowers, 0, 0, 80, 80);
@@ -420,11 +488,7 @@ function render(agent) {
     imageMode(CENTER);
     image(agent.spritesAk47, 0, 0, 100, 100);
   }
-  else if (settings.rotate == true && settings.maga == true)  {
-    rotate(agent.vel.heading());
-    imageMode(CENTER);
-    image(agent.spritesMaga, 0, 0, 80, 80);
-  }
+
   else if (settings.rotate == true && settings.usaFlag == true)  {
     rotate(agent.vel.heading());
     imageMode(CENTER);
@@ -440,84 +504,27 @@ function render(agent) {
     imageMode(CENTER);
     image(agent.spritesFaang, 0, 0, 80, 80);
   }
+
   else if (settings.rotate == true && settings.warhols == true)  {
     rotate(agent.vel.heading());
     imageMode(CENTER);
     image(agent.spritesWarhols, 0, 0, 80, 80);
   }
+
   else if (settings.rotate == true && settings.prides == true)  {
     rotate(agent.vel.heading());
     imageMode(CENTER);
     image(agent.spritesPrides, 0, 0, 80, 80);
   }
-
-
-
-
-else if (settings.rotate == false && settings.circle == true)  {
+else if (settings.rotate == true && settings.circle == true)  {
 
  ellipseMode(CENTER);
  ellipse(0, 0, 20, 20);  
 } 
-else if (settings.rotate == false && settings.flowers == true)  {
 
- imageMode(CENTER);
- image(agent.spritesFlowers, 0, 0, 80, 80);
 
-}
-else if (settings.rotate == false && settings.emojis == true)  {
 
-  imageMode(CENTER);
-  image(agent.spritesEmojis, 0, 0, 80, 80);
- 
- }
-else if (settings.rotate == false && settings.bots == true)  {
 
- imageMode(CENTER);
- image(agent.spritesBots, 0, 0, 80, 80);
-}
-
- else if (settings.rotate == false && settings.covid == true)  {
-
-  imageMode(CENTER);
-  image(agent.spritesCovid, 0, 0, 80, 80);
- } 
- else if (settings.rotate == false && settings.fire == true)  {
-
-  imageMode(CENTER);
-  image(agent.spritesFire, 0, 0, 80, 80);
- } 
- else if (settings.rotate == false && settings.ak47 == true)  {
-
-  imageMode(CENTER);
-  image(agent.spritesAk47, 0, 0, 80, 80);
- } 
- else if (settings.rotate == false && settings.maga == true)  {
-  imageMode(CENTER);
-  image(agent.spritesMaga, 0, 0, 80, 80);
- } 
- else if (settings.rotate == false && settings.usaFlag == true)  {
-  imageMode(CENTER);
-  image(agent.spritesUSA, 0, 0, 80, 80);
- } 
- else if (settings.rotate == false && settings.crosses == true)  {
-  imageMode(CENTER);
-  image(agent.spritesCrosses, 0, 0, 80, 80);
- } 
- else if (settings.rotate == false && settings.faang == true)  {
-  imageMode(CENTER);
-  image(agent.spritesFaang, 0, 0, 80, 80);
- }
-   else if (settings.rotate == false && settings.warhols == true)  {
-  imageMode(CENTER);
-  image(agent.spritesWarhols, 0, 0, 80, 80);
- } 
- else if (settings.rotate == false && settings.prides == true)  {
-  imageMode(CENTER);
-  image(agent.spritesPrides, 0, 0, 80, 80);
- } 
-
- 
 pop();
 }
 
